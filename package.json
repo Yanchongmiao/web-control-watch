@@ -1,7 +1,7 @@
 {
-    "name": "ycTest",
+    "name": "web-control-watch",
     "version": "1.0.0",
-    "description": "rollup模板",
+    "description": "web-control-watch",
     "main": "./src/main.ts",
     "scripts": {
         "bootstrap": "pnpm install && pnpm run husky",
@@ -19,30 +19,25 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Yanchongmiao/template-rollup.git"
+        "url": "git+https://github.com/Yanchongmiao/web-control-watch.git"
     },
     "engines": {
         "node": "^12 || >=14"
     },
     "keywords": [
-        "rollup",
-        "rollup-template",
-        "template",
+        "web-control-watch",
+        "web-control",
         "typescript"
     ],
-    "author": {
-        "name": "rollup-template",
-        "email": "xxx@xxx.com",
-        "url": "https://github.com/Yanchongmiao/template-rollup.git"
-    },
+    "author": "rollup-template <xxx@xxx.com> (https://github.com/Yanchongmiao/web-control-watch.git)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Yanchongmiao/template-rollup/issues"
+        "url": "https://github.com/Yanchongmiao/web-control-watch/issues"
     },
     "bin": {
-        "ycTest": "./src/main.ts"
+        "web-control-watch": "src/main.ts"
     },
-    "homepage": "https://github.com/Yanchongmiao/template-rollup#readme",
+    "homepage": "https://github.com/Yanchongmiao/web-control-watch#readme",
     "devDependencies": {
         "@babel/core": "^7.18.5",
         "@babel/preset-env": "^7.18.2",
@@ -121,5 +116,12 @@
         "commitizen": {
             "path": "node_modules/cz-customizable"
         }
+    },
+    "dependencies": {
+        "eslint-utils": "^3.0.0",
+        "eslint-scope": "^7.1.1",
+        "prettier-linter-helpers": "^1.0.0",
+        "eslint-visitor-keys": "^3.3.0",
+        "vue-eslint-parser": "^9.0.2"
     }
 }
