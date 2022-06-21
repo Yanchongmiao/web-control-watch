@@ -1,9 +1,9 @@
 {
     "name": "web-control-watch",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "web-control-watch",
-    "main": "./src/main.ts",
     "scripts": {
+        "sh": "sh publish.sh",
         "bootstrap": "pnpm install && pnpm run husky",
         "dev": "rollup -c config/rollup.config.dev.js --watch && npm run build:types",
         "build": "npm run build:types && rollup -c config/rollup.config.build.js",
@@ -35,8 +35,16 @@
         "url": "https://github.com/Yanchongmiao/web-control-watch/issues"
     },
     "bin": {
-        "web-control-watch": "src/main.ts"
+        "web-control-watch": "dist/esm/index.js"
     },
+    "types": "./dist/main.d.ts",
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md",
+        "lib"
+    ],
+    "main": "dist/esm/index.js",
     "homepage": "https://github.com/Yanchongmiao/web-control-watch#readme",
     "devDependencies": {
         "@babel/core": "^7.18.5",
