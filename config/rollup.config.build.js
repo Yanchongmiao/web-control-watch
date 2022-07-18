@@ -18,16 +18,16 @@ const env = process.env.NODE_ENV
 const config = {
     input: 'src/main.ts',
     output: [{
-        file: 'dist/lib/umd/index.js',
+        file: 'dist/umd/index.js',
         format: 'umd',// amd / es6 / iife / umd / cjs (umd同时支持 amd、cjs 和 iife)
-        name: 'bundleName', //当format为 iife 或 umd 时必须提供，将作为全局变量挂在window(浏览器环境)下：window.A=...
+        name: 'webControlWatch', //当format为 iife 或 umd 时必须提供，将作为全局变量挂在window(浏览器环境)下：window.A=...
         sourcemap: false,  //生成bundle.map.js文件，方便调试
         globals: {
             // Vue: 'Vue', // 这跟external 是配套使用的，指明global.React即是外部依赖react
         }
     },
     {
-        file: 'dist/lib/esm/index.js', // 打包成esmodule
+        file: 'dist/esm/index.js', // 打包成esmodule
         format: 'es'
     },
     ],
@@ -61,7 +61,7 @@ const config = {
             ]
         }),
         clear({
-            targets: ['dist/lib'],
+            targets: ['dist'],
             watch: true,
         }),
     ],

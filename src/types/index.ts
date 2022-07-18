@@ -7,12 +7,36 @@ export interface initOptions {
     peojectName: string | number;
     peojectCode?: string | number;
     maxCollection: number;
+    osType: string;
+    clientType: string;
+    clientVersion: string;
     outputLog: boolean;
 }
 export interface sendInfo {
-    type: string;
-    msg: string;
-    info?: any;
+    ErrorType: errorType;
+    error: string;
     date: number;
-    [key: string]: string | number;
+    meta: Meta;
+    type: string;
+    value: string;
+    stackTrace: any;
+    // [key: string]: string | number;
+}
+
+export enum errorType {
+    JS = 'js',
+    RS = 'resource',
+    PROMISE = 'promise',
+    UJ = 'unhandledrejection',
+    HP = 'http',
+    CS = 'cors',
+    VUE = 'vue',
+    REACT = 'react',
+}
+interface Meta {
+    file?: string;
+    // col 错误列号
+    col?: number;
+    // row 错误行号
+    row?: number;
 }

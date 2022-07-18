@@ -14,9 +14,9 @@
         "noImplicitAny": false, // 是否默认禁用 any
         "emitDeclarationOnly": true, // 只输出.d.ts声明文件，不生成js文件
         "declaration": true, // 是否自动创建类型声明文件
-        "declarationDir": "./dist/lib", // 类型声明文件的输出目录
+        "declarationDir": "./dist", // 类型声明文件的输出目录
         "removeComments": true, // 是否移除注释
-        "outDir": "./dist/lib/esm/", // 输出目录
+        "outDir": "./dist/esm/", // 输出目录
         "baseUrl": ".",
         "allowJs": true, // 允许编译javascript文件。
         "paths": {
